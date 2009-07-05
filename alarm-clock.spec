@@ -1,6 +1,7 @@
 # TODO
 # - do something (what?) with bs and nn locales
 # - what about la locale?
+# - does not work with awesome (with tiling wms?)
 #
 Summary:	Allarm panel applet for GNOME
 Summary(pl.UTF-8):	Budzik dla GNOME
@@ -14,8 +15,8 @@ Source0:	http://89.76.224.23/downloads/%{name}-%{version}.tar.bz2
 URL:		http://alarm-clock.54.pl/
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
+Requires:	dbus(org.freedesktop.Notifications)
 Requires:	gstreamer-audio-formats
-Requires:	notification-daemon
 Requires:	python-gstreamer
 Requires:	python-pynotify
 BuildArch:	noarch
