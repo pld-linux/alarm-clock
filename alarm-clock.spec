@@ -35,14 +35,11 @@ Alarm Clock to budzik napisany jako applet dla środowiska GNOME.
 %setup -q
 
 %build
-export CFLAGS="%{rpmcflags}"
-%{__python} setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 find $RPM_BUILD_ROOT%{py_sitescriptdir} -name \*.py -exec rm -f {} \;
 %find_lang %{name}
