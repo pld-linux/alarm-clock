@@ -13,6 +13,7 @@ Group:		Applications
 Source0:	http://89.76.224.23/downloads/%{name}-%{version}.tar.bz2
 # Source0-md5:	b6160b767cb5634db0b9afbda3b6a5ac
 URL:		http://alarm-clock.54.pl/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
 Requires:	dbus(org.freedesktop.Notifications)
